@@ -1,0 +1,5 @@
+var text = "The New Yorker magazine doesn't allow the phrase World War II.They say it should be the Second World War. So let's search the following sentence for the banned characters and replace them with the phrase that the New Yorker prefers.It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien was writing the trilogy, which contains, with the weird applicability available only to poetry and myth, the essential notion that the good gray wizard can understand the evil magi precisely because he is just enough like them to grasp their minds and motives in ways that they cannot grasp his."
+firstTextReplace = text.replace("World War II","the Second World War");
+allTextReplace = text.replace(/World War II/g,"the Second World War"); // /World War II/g is a global replace
+console.log(firstTextReplace);
+console.log(allTextReplace);

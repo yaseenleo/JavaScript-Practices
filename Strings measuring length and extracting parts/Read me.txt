@@ -1,0 +1,1 @@
+In index file point has to be defined which i have compiled in console

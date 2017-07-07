@@ -1,0 +1,3 @@
+having issue with slice method
+
+applying slice method twice in single array noPets but the issue is it is overwriting the first slice value and showing second slice value.

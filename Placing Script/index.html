@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Placing Script</title>
+</head>
+
+<body>
+    <p>Generally, the best place for scripts, though, is at the end of the body section. This guarantees that CSS styling and
+        image display won't get held up while scripts are loading. When you embed blocks of JavaScript in HTML (as opposed
+        to having a separate JavaScript file), you must enclose the JavaScript code between <span class="blue">&ltscript&gt</span>        and <span class="blue">&lt/script&gt</span> tags.
+    </p>
+    <p>For most purposes, coders prefer to have all or most of their JavaScript code in a separate JavaScript file, then have
+        the browser load this external file at the same time it's loading the HTML file.</p>
+    <p>What makes a JavaScript file a JavaScript file is its file extension: .js. The front end of the file name is up to you,
+        as long as it's legal. Any of these would be fine.</p>
+    <ul>
+        <li>script.js</li>
+        <li>core.js</li>
+        <li>main-code.js</li>
+        <li>main_code.js</li>
+        <li>maincode.js</li>
+    </ul>
+    <p>You can include as many external JavaScript files as you like.</p>
+    <p>You can include JavaScript files and also embed other JavaScript code in the HTML.</p>
+</body>
+<script>
+    function sayHi() {
+        alert("Hello World");
+    }
+    sayHi();
+
+</script>
+
+</html>

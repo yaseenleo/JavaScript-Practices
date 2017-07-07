@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date and Time</title>
+    <script src="app.js" type="text/javaScript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>the webapge includes a local date and time in his particular time zone.But what is the current date and time. We can
+        access date and time by <span class="blue">new Date();</span></p>
+    <p>Note that JavaScript gets this information from the user's computer. It is only as accurate as the computer's date and
+        time settings. For example, if the user just moved from the U.S. West Coast to the U.S. East Coast and hasn't reset
+        the time zone on his computer, the computer will still be on Pacific Time. The ate object, too will be on Pacific
+        Time.
+    </p>
+    <p>The Date object may resemble a string but it isn't one. For example, you can't use methods on it like <span class="blue">charAt</span>,
+        <span class="blue">indexOf</span>,<span class="blue">slice</span></p>
+    <p>The following line number 7 is used to get the day.But when you extract the day of the wee from the object it's represented
+        as a number.Days are desisgnated by a number from 0 for sunday through 6 for Saturday</p>
+    <h2>Steps by step explanation:</h2>
+    <ol>
+        <li>Create an array of days starting with "Sun" and assigns ot to <span class="blue">dayNames</span></li>
+        <li>Create a new Date object and assigns it to <span class="blue">now</span></li>
+        <li>Extracts the day of the week as a number and assigns it to <span class="blue">day</span></li>
+        <li>Uses the day number as an index to spicify the correct array element,i.e. the day name</li>    
+    </ol>    
+</body>
+
+</html>

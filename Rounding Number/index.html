@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rounding Number</title>
+    <script src="app.js" type="text/javaScript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>important points to keep in mind</h1>
+    <h3>Round</h3>
+    <ul>
+        <li><span class="blue">Math</span> is how all math function begin.The"M" must be capped</li>
+        <li>The function rounds up when the decimal is .5. It rounds 1.5 to 2, 2.5 to 3, etc. It rounds - 1.5 to -1, -2.5 to
+            -2, etc.</li>
+    </ul>
+    <h3>Ceil</h3>
+    <ul>
+        <li>To force JavaScript to <span class="blue">round</span> up to the nearest integer, no matter how small the fraction,
+            use
+            <span class="blue">ceil</span> instead of <span class="blue">round</span>. The following code rounds .000001,
+            which would normally round down to 0, up to the nearest integer, 1.</li>
+        <li>ceil stands for "ceiling." It rounds .000001 up to 1, -.000001 up to 0, 1.00001 up to 2, and so on.</li>
+    </ul>
+    <h3>Floor</h3>
+    <ul>
+        <li>To force JavaScript to round down to the nearest integer, no matter how large the fraction, use <span class="blue">floor</span>            instead of
+            <span class="blue">round</span>. The following code rounds .999999, which would normally round up to 1, down
+            to 0.</li>
+        <li>floor rounds .999999 down to 0, 1.9 down to 1, -.000001 down to -1, and so on. 86
+        </li>
+    </ul>
+</body>
+
+</html>

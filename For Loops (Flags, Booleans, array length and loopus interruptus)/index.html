@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="app.js" type="text/javaScript"></script>
+</head>
+
+<body>
+    <p>There are several problems with the for loop example I gave you in the last chapter. The first problem is a potential
+        communication problem. If a match between the user's city and the list of cleanest cities is found, a confirming
+        alert displays. But if there is no match, nothing happens. The user is left in the dark. If no match is found, we
+        need to display an alert saying so. But how do we do that?</p>
+    <p style="text-indent:25px">We do it with a flag. A flag is just a variable that starts out with a default value that you give it, and then is switched
+        to a different value under certain conditions. In our example, let's say this is the flag.</p>
+    <p style="font-weight:bold">var matchFound = "no";</p>
+    <p>If a match is found, the value of the flag is changed. At the end, if the flag hasn't been changed—if it still has the
+        original value of "no"—it means no match was found, and so we display an alert saying the city isn't on the list.</p>
+    <ol>
+        <li><span class="redTextUnderline">var matchFound = "no";</span></li>
+        <li style="text-indent:5px">for (var i = 0; i
+            <=4 ; i++);</li>
+                <li style="text-indent:10px">if (cityToCheck === cleanestCities[i]) {</li>
+                <li style="text-indent:13px"><span class="redTextUnderline">matchFound = "yes";</span></li>
+                <li style="text-indent:13px">alert("It's one of the cleanest cities");</li>
+                <li style="text-indent:10px">}</li>
+                <li>}</li>
+                <li><span class="redTextUnderline">if (matchFound === "no") {</span></li>
+                <li style="text-indent:13px">alert("It's not on the list");</li>
+                <li style="text-indent:10px">}</li>
+    </ol>
+    <p>This works, but rather than assigning the strings "no" and "yes" to the switch, it's conventional to use the Boolean
+        values <span class="blueText">false</span> and <span class="blueText">true</span>.</p>
+    <ol>
+        <li>var matchFound = <span class="redTextUnderline">false</span>;</li>
+        <li style="text-indent:5px">for (var i = 0; i
+            <=4 ; i++);</li>
+                <li style="text-indent:10px">if (cityToCheck === cleanestCities[i]) {</li>
+                <li style="text-indent:13px">matchFound = <span class="redTextUnderline">true</span>;</li>
+                <li style="text-indent:13px">alert("It's one of the cleanest cities");</li>
+                <li style="text-indent:10px">}</li>
+                <li>}</li>
+                <li>if (matchFound === <span class="redTextUnderline">false</span>) {</li>
+                <li style="text-indent:13px">alert("It's not on the list");</li>
+                <li style="text-indent:10px">}</li>
+    </ol>
+    <p>There are only two Booleans, <span <span class="blueText">true</span> and <span <span class="blueText">false</span>.
+        Note that they aren't enclosed in quotes.</p>
+    <p>The next problem with our example is that it potentially wastes computing cycles. Suppose on the second loop a match
+        is found and the alert displays. The way the loop is coded, the loop goes on looping all the way to the end. This
+        is unnecessary, since we got our answer in the second loop. The problem is solved with the keyword <span style="color:skyblue"><b>break</b></span>.</p>
+    <ol>
+        <li>var matchFound = <span class="redTextUnderline">false</span>;</li>
+        <li style="text-indent:5px">for (var i = 0; i
+            <=4 ; i++);</li>
+                <li style="text-indent:10px">if (cityToCheck === cleanestCities[i]) {</li>
+                <li style="text-indent:13px">matchFound = <span class="redTextUnderline">true</span>;</li>
+                <li style="text-indent:13px">alert("It's one of the cleanest cities");</li>
+                <li style="text-indent:13px"><span class="redTextUnderline">break;</span></li>
+                <li style="text-indent:10px">}</li>
+                <li style="text-indent:5px">}</li>
+                <li style="text-indent:5px">if (matchFound === false) {</li>
+                <li style="text-indent:10px">alert("It's not on the list");</li>
+                <li>}</li>
+    </ol>
+    <p>The last problem: In the example, I assume that the number of elements in the array is known. But what if it isn't? JavaScript
+        has a way of finding out. The following code assigns the number of elements in the array cleanestCities to the variable
+        numElements.
+    </p>
+    <p style="font-weight:bold">var numElements = cleanestCities.<span class="redTextUnderline">length</span>;</p>
+    <ol>
+        <li><span class="redTextUnderline">var numElements = cleanestCities.length;</span></li>
+        <li>var matchFound = false;</li>
+        <li>for (var i = 0; <span class="redTextUnderline">i < numElements;</span> i++);</li>
+        <li style="text-indent:10px">if (cityToCheck === cleanestCities[i]) {</li>
+        <li style="text-indent:15px">matchFound = true;</li>
+        <li style="text-indent:15px">alert("It's one of the cleanest cities");</li>
+        <li style="text-indent:15px">break;</li>
+        <li style="text-indent:10px">}</li>
+        <li>}</li>
+        <li>if (matchFound === false) {</li>
+        <li style="text-indent:10px">alert("It's not on the list");</li>
+        <li>}</li>
+    </ol>
+    <p>Now the loop keeps going as long as i is less than the number of elements. (Since the
+<span class="blueText">length</span> number is 1-based and the i number is 0-based, we need to stop 1 short of the length.)</p>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Extracting parts of date and time</title>
+    <script src="app.js" type="text/javaScript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table border="solid" width="100%" cellpadding="10">
+        <tr>
+            <th>Methods</th>
+            <th>Gets</th>
+            <th>Range</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>getDay()</td>
+            <td>days of week</td>
+            <td>0 - 6</td>
+            <td>0 is Sunday</td>
+        </tr>
+        <tr>
+            <td>getMonth()</td>
+            <td>month</td>
+            <td>0 - 11</td>
+            <td>0 is January</td>
+        </tr>
+        <tr>
+            <td>getDate()</td>
+            <td>day of month</td>
+            <td>1 - 13</td>
+            <td>1 is 1st of month</td>
+        </tr>
+        <tr>
+            <td>getFullYear()</td>
+            <td>Year</td>
+            <td></td>
+            <td>2017</td>
+        </tr>
+        <tr>
+            <td>getHours()</td>
+            <td>hour</td>
+            <td>0 - 23</td>
+            <td>0 is midnight 12, is noon, 23 is 11 p.m</td>
+        </tr>
+        <tr>
+            <td>getMinutes()</td>
+            <td>minutes</td>
+            <td>0 - 59</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getSeconds()</td>
+            <td>second</td>
+            <td>0 - 59</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getMilliseconds()</td>
+            <td>millisecond</td>
+            <td>0.999</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getTime()</td>
+            <td colspan="3">Milliseconds since midenight, January 1 2017</td>
+        </tr>
+    </table>
+    <h2>Points To Remember</h2>
+    <ul>
+        <li><span class="blue">getDate</span> gives you anumber for the day of the month.</li>
+        <li><span class="blue">getFullYear</span> gives you a 4-digit number for the year.</li>
+        <li><span class="blue">getHours</span> gives you a number from 0 through 23 corresponding to midnight through 11.</li>
+        <li><span class="blue">getMinutes</span> gives you a number from 0 through 59.</li>
+        <li><span class="blue">getSeconds</span>gives you a number from 0 through 59.</li>
+        <li><span class="blue">getMilliseconds</span> gives you a number from 0 through 999.</li>
+        <li><span class="blue">getTime</span> gives you the number of milliseconds that have elapsed since midnight Aug 1, 2017 </li>
+    </ul>
+</body>
+</html>

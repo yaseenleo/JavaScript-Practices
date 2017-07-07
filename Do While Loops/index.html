@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do while loops</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>In a while loop the order of instruction is:</p>
+    <ol>
+        <li>Declare a variable to serve as a counter, and assign a value to it.</li>
+        <li>Start the loop, specifying how long the loop is to run.</li>
+        <li>Execute one or more statements.</li>
+        <li>Within the loop, as a final statement, advance the counter.</li>
+    </ol>
+    <p>A do...while loop accomplishes almost the same task as a while loop.</p>
+    <p>The difference between the two types of loops</p>
+    <ul>
+        <li>Instead of while, the keyword do leads off the statement.</li>
+        <li>The <span class="blue">while</span> clause, including the loop-limiting code inside the parentheses, moves to the
+            bottom after the closing curly bracket</li>
+    </ul>
+    <p>Note that the <span class="blue">while</span> clause ends with a semicolon.</p>
+    <p>Functionally, the difference between a <i>while</i> loop and a <i>do...while</i>loop is following in the app.js file</p>
+    <p>In line 14 to 18, The code says to keep running an alert as long as the counter is less than 0. But since the counter
+        is never less than 0, the code inside the curly brackets never executes.</p>
+        <p>Compare this with the <i>do...while</i> loop from line 20 to 25</p>
+        <p>The alert will display once, even though the keep-going condition—i less than 0—never
+occurs. Since a <i>do...while</i> loop executes the code inside the curly brackets before it gets to the
+loop-limiter at the bottom, it always executes that code at least once, no matter what the looplimiter
+says.</p>
+</body>
+
+</html>

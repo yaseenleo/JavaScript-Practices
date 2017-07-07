@@ -1,0 +1,2 @@
+However the first code which is commited has a issue that when i am calling the array the result which is alert is not correct when we check the console the boolean value 
+shows that it is getting the value but the alert result is different.

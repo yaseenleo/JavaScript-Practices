@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Specifying date and time</title>
+    <script src="app.js" type="text/javaScript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>Let's start with the estimated date. According to the system's trustees, the money will run out in 2035. They didn't
+        pin down an exact date. Let's pick the middle of the year - June 30</p>
+    <p>First create a date object for the current date and time. Notice how the date is specified it's in quotes. The month
+        is spelled out there's a comma after the day of the month. The year is exrpessed in four digits.</p>
+    <p>Next you extract both dates the milliseconds that have elapsed since the current date</p>
+    <p>Some simple math converts the milliseconds to days. The huge number created by the math inside the parenthesis converts
+        the milliseconds into seconds(1000), minutes(60),hours(60), and days(24).</p>
+    <p>As we know that the following statement <span class="blue">float</span> rounds the number of day, which is probably a
+        floating-point number, down to an integer.</p>
+    <h3>Explanation from line 14</h3>
+    <ul>
+        <li>Substracts the milliseconds since the reference date of the current moment from the milliseconds since the reference
+            date of June 30, 2035</li>
+        <li>Converts the milliseconds to days and rounds down</li>
+    </ul>
+    <p>If the time is important, you can specify that as well.</p>
+    <p>Note the form used to specify the time: No comma after the date. 24-hour time. Colons separating hours, minutes, and
+        seconds.</p>
+</body>
+
+</html>

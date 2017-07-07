@@ -1,0 +1,16 @@
+.redTextUnderline {
+    color: red;
+    text-decoration: underline;
+}
+
+.blueText {
+    color:skyblue;
+    font-weight: bold;
+}
+p {
+    font-size: 20px
+}
+
+ol {
+    font-size: 20px
+}

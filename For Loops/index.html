@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For Loops</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!--<script src="app.js" type="text/javaScript"></script>-->
+</head>
+
+<body>
+    <p>You know the song "99 Bottles of Beer on the Wall"? If you're teaching someone the song, you could give them these instructions:</p>
+
+    <ol>
+        <li>Sing "99 bottles of beer on the wall, 99 bottles of beer."</li>
+        <li>Sing "Take one down and pass it around, 98 bottles of beer on the wall."</li>
+        <li>Sing "98 bottles of beer on the wall, 98 bottles of beer."</li>
+        <li>Sing "Take one down and pass it around, 97 bottles of beer on the wall."</li>
+        <li>Sing "97 bottles of beer on the wall, 97 bottles of beer."</li>
+        <li>Sing "Take one down and pass it around, 96 bottles of beer on the wall."</li>
+    </ol>
+    <p>...and so on, for 192 more lines of instructions.</p>
+    <p>But that isn't how you'd give the instructions, is it? You'd be more concise. You'd say something like this:</p>
+    <p style="text-indent:20px">Sing "99 bottles of beer on the wall, 99 bottles of beer. Take one down and pass it around, 98 bottles of beer on the
+        wall." Repeat this, subtracting 1 each time, until there are no more bottles of beer on the wall.</p>
+    <p>In coding, you run into the bottles-of-beer situation quite often. For example, suppose you've offered to check if the
+        user's city is one of the 5 cleanest in the U.S. The user has entered her city, and you've assigned her city to the
+        variable <span style="color:skyblue"><b>cityToCheck</b></span> .</p>
+    <p>You've already assigned the list of the 5 cleanest cities to the array <span style="color:skyblue"><b>cleanestCities.</b></span></p>
+    <h4>var cleanestCities = ["Cheyenne", "Santa Fe", "Tucson", "Great Falls", "Honolulu"];</h4>
+    <p style="text-indent:20px">Now you go through the array to see if there's a match with the user's city. If there is, you display an alert telling
+        the user her city is one of the cleanest. If there's no match, you display an alert telling the user her city isn't
+        on the list.</p>
+    <ol>
+        <li>if (cityToCheck === cleanestCities[0]) {</li>
+        <li style="text-indent:15px">alert("It's one of the cleanest cities");</li>
+        <li>}</li>
+        <li>else if (cityToCheck === cleanestCities[1]) {</li>
+        <li style="text-indent:15px">alert("It's one of the cleanest cities");</li>
+        <li>}</li>
+        <li>else if (cityToCheck === cleanestCities[2]) {</li>
+        <li style="text-indent:15px">alert("It's one of the cleanest cities");</li>
+        <li>}</li>
+        <li>else if (cityToCheck === cleanestCities[3]) {</li>
+        <li style="text-indent:15px">alert("It's one of the cleanest cities");</li>
+        <li>}</li>
+        <li>else if (cityToCheck === cleanestCities[4]) {</li>
+        <li style="text-indent:15px">alert("It's one of the cleanest cities");</li>
+        <li>}</li>
+        <li>else {</li>
+        <li style="text-indent:15px">alert("It's not on the list");</li>
+        <li>}</li>
+    </ol>
+    <p>Conveniently, JavaScript provides a more concise coding approach. Here's a for loop that accomplishes most of what the
+        verbose code in the example above accomplishes.</p>
+    <ol>
+        <li>for (var i = 0; i
+            <=4 ; i++) {</li>
+                <li style="text-indent:15px">if (cityToCheck === cleanestCities[i]) {</li>
+                <li style="text-indent:30px">alert("It's one of the cleanest cities");</li>
+                <li style="text-indent:15px">}</li>
+                <li>}</li>
+    </ol>
+
+    <p style="margin:0px">Let me break down the first line for you.</p>
+    <p style="margin:0px">The first line begins with the keyword <span style="color:skyblue"><b>for</b></span>.</p>
+    <p style="margin:0px">The three specifications that define the loop are inside the parentheses.</p>
+
+    <ol>
+        <li>A variable that counts iterations and also serves as the changing array index is declared and set to a starting value,
+            in this case 0.</li>
+        <li>The limit on the loop is defined. In this case, the loop is to keep running as long as the counter doesn't exceed
+            4. Since the counter, in this case, is starting at 0, the loop will run 5 times.</li>
+        <li>What happens to the counter at the end of every loop. In this case, the counter is incremented each time.</li>
+    </ol>
+    <p>The three specifications inside the parentheses are always in the same order:</p>
+    <ol>
+        <li>What to call the counter (usually i) and what number to start it at (typically 0)</li>
+        <li>How many loops to run (in this case, the number of elements in the array)</li>
+        <li>How to change the counter after each iteration (typically to add 1 each time through)</li>
+    </ol>
+    <p>Things to keep in mind:</p>
+    <ul>
+        <li>In the example, the counter, <span style="color:skyblue; font-size:23px"><b>i</b></span>, serves two purposes. It
+            keeps track of the number of iterations so looping can halt at the right point. And it serves as the index number
+            of the array, allowing the code to progress through all the elements of the array as the counter increments with
+            each iteration.</li>
+        <li>There is nothing sacred about using i as the counter. You can use any legal variable name. But coders usually use
+            <span style="color:skyblue; font-size:23px"><b>i</b></span> because it keeps the first line compact, and because
+            coders understand that <span style="color:skyblue; font-size:23px"><b>i</b></span> stands for "iteration."</li>
+        <li>In the example, the initial count is 0, the index number of the first element of the array. But it could be any number,
+            depending on your needs.</li>
+        <li>In the example, the counter increments with each iteration. But, depending on your needs,you can decrement it, increase
+            it by 2, or change it in some other way each time through.</li>
+        <li>In the example, I specify that the loop is to run as long as <span style="color:skyblue; font-size:23px"><b>i</b></span>
+            <=4 . Alternatively, I could have specified i < 5. Either way, since the counter starts at 0, the loop runs 5 times.</li>
+    </ul>
+
+</body>
+
+</html>

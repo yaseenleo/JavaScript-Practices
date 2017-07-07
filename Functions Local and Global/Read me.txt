@@ -1,0 +1,2 @@
+Explanation not complete in index file.
+explanation about declaring a variable both in a main and function is left.
