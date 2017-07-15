@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reading field values</title>
+    <script src="app.js" type="text/javaScript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>In our required field, the form has a <b>submit</b> button that the user clicks to submit the information that is entered
+        in the form</p>
+    <p>Now, when the user clicks the <b>submit</b> button, the function <span class="blue">checkAddress</span> executes.note
+        that, even though the action is on a click on the <b>submit</b> button, the <b>onSubmit</b> event handler is in the
+        <span class="blue">form</span> tag, not in the <span class="blue">submit</span> button tag. That's because the submission
+        is an event that applies to the whole form, not the <span class="blue">submit</span> button.</p>
+    <p>Here's where things get interesting. When the form is submitted, the function <span class="blue">checkAddress</span>        looks to see if the user has entered anything in the email field. If not the function displays an alert reminding
+        the user that the email address is required.</p>
+    <h3>This is the sequence you need to memorize in the <b>app.js</b> file.</h3>
+    <ol>
+        <li>The keyword <span class="blue">document</span>, followed by...</li>
+        <li>a dot, followed by...</li>
+        <li>the keyword <span>getElementById</span>, followed by...</li>
+        <li>the parameter, in params received from the calling code, <span class="blue">fieldId</span>, followed by...</li>
+        <li>another dot, followed by...</li>
+        <li>the keyword <span class="blue">value</span></li>
+    </ol>
+    <form onsubmit="checkAddress('email','password')">
+        Email:
+        <input type="text" id="email">
+        <input type="password" id="password">
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>
