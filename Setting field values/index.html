@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Setting field values</title>
+    <script src="app.js" type="text/javaScript"></script>
+</head>
+
+<body>
+    <p>Here's the relevant markup for the form action, a submit button.</p>
+    <p>When theuser clicks out of the ZIP field, the <span class="blue">onBlur</span> event triggers the <span class="blue">fillCity</span>        function.</p>
+    <form>
+        ZIP: <br />
+        <input type="text" id="zip" onblur="fillCity();"> <br /> City: <br />
+        <input type="text" id="city">
+    </form>
+    <p>This example shows that you can not only read a value in a field with <span class="blue">document.getElementById...</span>,
+        but can also "write" a value into a field.</p>
+    <p>In this case, the function assigns the value found in the ZIP field to a variable. Then using a <i>switch</i> statement,
+        it matches the ZIP to a city name and assigns that name to a second variable. Then, using the variable, it places
+        the city name in the city field.</p>
+</body>
+
+</html>
