@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Event: Field</title>
+    <script src="app.js" type="text/javaScript"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <p>The keyword <span class="blue">OnFocus</span> tells JavaScript to do something when the users clicks in the field</p>
+    <p>If you want to revert to a white background, you do this with the <span class="blue">onBlur</span> keyword, which is the opposite of <span class="blue">onFocus</span>.</p>
 
+    Email: <br />
+    <input type="text" size="30" onfocus="this.style.backgroundColor='yellow'" onblur="this.style.backgroundColor='white'">
 </body>
 </html>
