@@ -1,0 +1,17 @@
+#kurama {
+    height: 50%;
+    width: 50%;
+}
+
+#sasuke {
+    height: 50%;
+    width: 50%;
+}
+
+.doubleSize {
+    font-size: 2em;
+}
+
+.blue {
+    color: skyblue;
+}
