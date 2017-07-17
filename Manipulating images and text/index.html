@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulating images and text</title>
+    <script src="app.js" type="text/javaScript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="font-family:cursive">
+    <img src="img/pic.jpg" alt="picture" id="pic" onclick="makeInvisible();">
+    <p>In this above picture i have given a option of making it disappear, when you click the image</p>
+    <ul>
+        <li>This is just a variation on things you've already learned,
+            <span class="blue">document.getElementById(theElementId).value</span> (for form fields) and
+            <span class="blue">document.getElementById(theElementId).innerHTML</span> (for paragraphs, divs, and other HTML
+            elements).</li>
+        <li>It's <span class="blue">className</span>, in camelCase, not <span class="blue">class</span>.</li>
+        <li class="blue">Assigning a class to an element this way replaces any classes that the element has been
+assigned in the static markup.</li>
+    </ul>
+    <p onclick="makeBig();" id="text">by clicking in this text, the text will inlarge its size and change its color.</p>
+    <p id="p1" class="mulClass" onclick="againMakeBig();">in this paragraph i have assigned multiple classes which will act</p>
+    <p>If you want to add a class to an element, preserving its existing classes, you can do it. For
+example, suppose you have a paragraph with a class that styles it in Verdana, size 1 em. When
+the user mouses over it, you want to double its size to 2 em. But you don't want to lose the
+Verdana styling of its original class. Rather than replace the class that styles it in Verdana, you
+want to retain that class and add the class that enlarges the font.</p>
+<p>the code that replaces all the existing classes with a new one, this code
+has two small differences.</p>
+<ul>
+    <li>Its <span class="blue">+=</span> instead of just <span class="blue">=</span></li>
+    <li>A space before the class nameis required</li>
+</ul>
+</body>
+
+</html>

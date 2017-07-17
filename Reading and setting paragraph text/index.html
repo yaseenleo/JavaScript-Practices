@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reading and setting paragraph text</title>
+    <script src="app.js" type="text/javaScript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>In HTML an id is assigned to the paragraph, which will be used by the function. When the user clicks the link, a function, <span class="blue">expandLoris</span> is called</p>
+    <p>In app.js line 2 assigns a long version of the text to a variable. Then identifying the paragraph by its id, line 3 replaces the original content, the <span class="blue">innerHTML</span>, with the text stored in the variable.</p>
+    <p><span></span></p>
+    <p id="slowLoris">Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus.<a href="javascript:void(O);"
+            onclick="expandLoris();">Click for more.</a></p>
+    <p>To show list of loris <a href="javascript:void(O)" onclick="listOfLoris();">Click Here.</a></p>
+    <ol id="lorisList">
+
+    </ol>
+    <p id="text">Hey there </p><a href="javascript:void(O)" onclick="peekAtContent();">Click Here</a>
+    <p id="greet">how are you</p>
+</body>
+
+</html>

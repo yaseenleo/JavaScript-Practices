@@ -1,0 +1,21 @@
+ .hidden {
+    display: none;
+} 
+
+.inlargeText {
+    font-size: 3em;
+    color: royalblue;
+}
+
+.mulClass {
+    font-family: sans-serif;
+    font-style: italic
+}
+
+.big {
+    font-size: 2em;
+}
+
+.blue {
+    color: skyblue;
+}
