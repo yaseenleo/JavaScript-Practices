@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Target elements by tag name</title>
+    <script src="app.js" type="text/javaScript"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>Suppose you want to give your users the option of doubling the size of the text in all the paragraphs of the document.
+        To accomplish this, you could give each paragraph an id. When the user clicks the <b>Double Text Size</b> button,
+        a function would cycle through all the paragraph ids and make the change. The function could upsize the font either
+        by assigning a new class to each paragraph, with the class specifying a larger font size, or it could assign the
+        new style property directly, An easier way to accomplish the same thing is to have the function say, "Find all the
+        paragraphs in the document and increase their size by <span class="blue">getElementByTagName("id")</span></p>
+    <p>This bed is too small.</p>
+    <p onclick="changeText();">This bed is too big.</p>
+    <p>This bed is just right.</p>
+</body>
+
+</html>
