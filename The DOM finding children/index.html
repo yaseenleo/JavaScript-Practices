@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The DOM: Finding children</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>As you have learned about, the Document Object Model (DOM) is a hierachy of parents and children. Everything on the web
+        page, excluding the document itself, is a child of something else. So now let's talk about how your JavaScript code
+        can make use of this hierarchy of parents and children to read or change virtually anything on a web page.</p>
+    <p>Let's begin with the methods you've already learned for targeting things on the web page.</p>
+    <p>The statement in line 1 targets the elements with the tag name which will target all the paragraph element of a particular
+        kind within the document. </p>
+
+    <div id="cal">
+        <p>Southern Cal is sunny.</p>
+        <p>Northern Cal is rainy.</p>
+        <p>Eastern Cal is desert.</p>
+    </div>
+    <div id="ny">
+        <p>Urban NY is crowded.</p>
+        <p>Rural NY is spares.</p>
+    </div>
+    <h3>Here's the breakdown:</h3>
+    <ul>
+        <li> Assigns the div with the id "ny" to the variable <span class="blue">div</span></li>
+        <li> Makes a collection of all the <span class="blue">&ltp&gt</span>s in the div and assigns the collection to the variable <span class="blue">p</span> </li>
+    </ul>
+</body>
+<script src="app.js" type="text/javaScript"></script>
+
+</html>

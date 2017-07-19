@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM: Junk artifacts and nodeType</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="humpty">
+        <p>All the king horses.</p>
+        <p>All the dude's crew.</p>
+        <p>All the town's orthopedists.</p>
+    </div>
+    <h3>Here's the breakdown:</h3>
+    <ul>
+        <li>1 Assigns the div to the variable <span class="blue">d</span></li>
+        <li>2 Counts the number of paragraphs</li>
+        <li>3 Goes through the children of the div looking for the next element node,i.e. Type 1, which we assume is a paragraph</li>
+        <li>4-6 Adds 1 to the counter. We're looking for the second paragraph</li>
+        <li>7-9 When the counter hits 2, we've reached the target paragraph.Change that second paragraph, it would be a lot easier
+            to assign it an id, and go straight to it,like this.<br /> document.<span class="blue">getElementById("p2")</span>.innerHTML
+            = "All his men.";</li>
+    </ul>
+    <p>You can see why the <span class="blue">getElementId</span> method is more popular with coders than tracing the DOM hierarchy.
+        But there are some things you can't do without working your way through the parent-child relationships of the DOM</p>
+</body>
+<script src="app.js" type="text/javaScript"></script>
+
+</html>
