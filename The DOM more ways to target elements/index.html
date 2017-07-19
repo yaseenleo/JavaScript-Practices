@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM More ways to target elements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>So far we've learned to use the DOM's parent-child hierarchy to target a child node of a parent node by specifying its
+        order in an array-like collection of children—<span class="blue">childNodes[0], childNodes[1], childNodes[2],</span>        and so on. But there are other ways to use the hierarchy for targeting. To begin with, instead of writing <span class="blue">childNodes[0],</span>        you can write <span class="blue">firstChild</span>. And instead of writing, for example, <span class="blue">childNodes[9],</span>        to target the 10th child in a 10-child collection of children, you can write <span class="blue">lastChild.</span></p>
+    <div>
+        <p>var targetNode = parentNode.<span class="red">childNode[0]</span></span></p>
+        <p>is the same as...</p>
+        <p>var targetNode = parentNode.<span class="red">firstChild</span>;</p>
+        <p>And if there are, for example, 3 child nodes..</p>
+        <p>var targetNode = parentNode.<span class="red">childNode[2]</span>;</p>
+        <p>is the same as...</p>
+        <p>var targetNode = parentNode.<span class="red">lastChild</span>;</p>
+        <br />
+        <p>You can use <span class="blue">nextSibling</span> and <span class="blue">previousSibling</span> to target the next child and the previous child in the collection of an element's children</p>
+        <p>If there is no <span class="blue">nextSibling</span> or <span class="blue">previousSibling</span>, you get null.</p>
+        <p>Counting siblings can be tricky, because, as you know, some browsers treat whitespace created by HTML formatting as text nodes, even though they're empty and without significance. </p>
+        <p>In your DOM if you want to target a node with <span class="blue">nextSibling</span> or <span class="blue">previousSibling</span> properly, you have to either format your HTML markup defensively so that no empty doesn't exist.</p>
+    </div>
+    <div id="div1">
+        <div id="div2">
+            <p>Chicago</p>
+            <p>Kansas City</p>
+            <p>St. Louis</p>
+        </div>
+    </div>
+</body>
+<script src="app.js" type="text/javaScript"></script>
+
+</html>
