@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM: Getting a target's name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="div1">
+        <p>Chicago</p>
+        <p>New York</p>
+        <p>Kansas</p>
+    </div>
+    <p>It's possible to confuse the node value of a text node with the <span class="blue">innerHTML</span> property. There are
+        two differences</p>
+    <ul>
+        <li><span class="blue">innerHTML</span> is a property of the element node, &lth2&gt, for example. The node value is a
+            property of the text node itself, not the parent element.</li>
+        <li><span class="blue">innerHTML</span> includes all the descendants of the element, including any inner element nodes
+            like <em> as well as text nodes. The node value includes only the characters that comprise the single text node. </li>
+    </ul>
+    <p>Since there are situations in which <span class="blue">nodeName</span> gets you, for example, a "p" instead of a "P" or an "href" instead of an "HREF," it's good practice to standardize the case when you're testing for names, like this</p>
+    <p>If the node name was originally upper-case, the code changes it to lower-case. If it was lower-case to begin with, no harm done.<br />If you're checking a node name to see if a node is a text node, converting to lower-case isn't necessary, because the name of a text node is always "#text", never "#TEXT".
+</p>    
+</body>
+    <script src="app.js" type="text/javaScript"></script>
+</html>
