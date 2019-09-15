@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -39,16 +40,33 @@
     <input type="text" id="names" placeholder="enter name">
     <input type="text" id="scores" placeholder="enter total score">
     <button onclick="calPercent()">submit</button>
-    
+
     <div id="result">
     </div>
-<hr />
+    <hr />
     <h2>Question 12</h2>
-    <p>a: which color you want in the beginning</p> 
-    <input type="text" id="b-color">
+    <p>which color you want replace position</p>
+    <input type="text" id="input-color">
+    <button onclick="colorOPtion()">submit</button>
+    <p id="color"></p>
+    
+    <p>a: which color you want in the beginning</p>
+    <input type="text" id="input-color-a">
     <button onclick="colorOPtionA()">submit</button>
     <p id="color-a"></p>
-    <p></p>
+
+    <p>b: which color you want in the end</p>
+    <input type="text" id="input-color-b">
+    <button onclick="colorOPtionB()">submit</button>
+    <p id="color-b"></p>
+
+    <p>c: adding 2 more color in the default array values</p>
+    <p id="color-c"></p>
+    <p id="color-c-u"></p>
+
+    <p>d: to delete first value of array <button onclick="colorOptionD()">click here</button></p>
+    <p id="color-d"></p>
+    <p id="color-d-u"></p>
 
     <hr />
     <h2>Question 13</h2>
@@ -63,7 +81,18 @@
         <p>Fruit list: <span id="f-list"></span></p>
         <p>Ordered Fruit List: <span id="f-list-sorted"></span></p>
     </div>
-    
+    <hr />
+    <h2>Question 15</h2>
+    <p>Cities list:<span id="cities-list"></span></p>
+    <p>Cities list:<span id="s-cities-list"></span></p>
+    <hr />
+    <h2>Question 16</h2>
+    <h3>The <span style="color: rgb(218, 78, 78)">join()</span> method returns the array as a string. <br />The elements
+        will be separated by a specified separator. The default separator is comma (,).</h3>
+    <p><strong>Note:</strong>this method will not change the original array.</p>
+    <p>Array Text: <span id="arr-text"></span></p>
+    <p>Array String: <span id="arr-string"></span></p>
+
 </body>
 <script src="js/app.js"></script>
 

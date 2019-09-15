@@ -173,29 +173,73 @@ console.log(elements);
 } 
 // ==========================================================
 
+// replace index position of array
 
-// let colorA = ["white","black","blue","red","green"];
-// let displayColorA = document.getElementById("color-a")
-// displayColorA.innerHTML = colorA
+let color = ["white","black","blue","red","green"];
+let displayColor = document.getElementById("color")
+displayColor.innerHTML = color
 
 
-// function colorOPtionA(){
-//     var value_A = document.getElementById("b-color").value;
-//     console.log("value",value_A)
-    
-//     //  colorA = colorA.values();
-//      colorA = JSON.stringify(colorA)
+function colorOPtion(){
+    var value_A = document.getElementById("input-color").value;
+    console.log("value",value_A)
+    let found = false , index = 0;
+    color.forEach((c,i)=>{
+        if(c===value_A)
+        {
+            found = true;
+            index = i;
+        }
+    });
+    if(found){
+        let temp = color[0];
+        color[0] = color[index];
+        color[index] = temp;
+        displayColor.innerHTML = JSON.stringify(color)
 
-//     for (let colors of colorA) {
-//         console.log(colorA);
-//         if(colors == value_A) {
-//             value_A = value_A.length
-//             console.log(value_A)
-//             colorA.move(3, 0).join(",")
-//             displayColorA.innerHTML = colorA
-//         }
-//     }    
-// }
+
+    }
+     color = JSON.stringify(color)
+ 
+}
+
+// question 12-a
+let colorA = ["white","black","blue","red","green"];
+document.getElementById("color-a").innerHTML = colorA
+
+function colorOPtionA(){
+    let valueColorA = document.getElementById("input-color-a")
+    valueColorA = valueColorA.value
+    colorA.unshift(valueColorA);
+    console.log(colorA);
+    document.getElementById("color-a").innerHTML = colorA
+}
+
+// question 12-b
+let colorB = ["white","black","blue","red","green"];
+document.getElementById("color-b").innerHTML = colorA
+
+function colorOPtionB(){
+    let valueColorB = document.getElementById("input-color-b")
+    valueColorB = valueColorB.value
+    colorB.push(valueColorB);
+    console.log(colorB);
+    document.getElementById("color-b").innerHTML = colorB
+}
+
+// question 12-c
+let colorC = ["white","black","blue","red","green"];
+document.getElementById("color-c").innerHTML = colorC
+colorC.splice(0,0,"purple","yellow");
+document.getElementById("color-c-u").innerHTML = colorC
+
+// question 12-d
+let colorD = ["white","black","blue","red","green"];
+document.getElementById("color-d").innerHTML = colorD
+function colorOptionD(){
+    colorD.shift()
+    document.getElementById("color-d-u").innerHTML = colorD
+}
 
 // question 13
 
@@ -219,3 +263,15 @@ var fruits = ["strawberry", "apple", "orange", "banana"];
 document.getElementById("f-list").innerHTML = fruits;
 var sortedFruits = fruits.sort();
 document.getElementById("f-list-sorted").innerHTML = sortedFruits;
+
+// question 15
+var cities = ["Karachi ","Lahore ","Islamabad ","Quetta ","Peshawar "];
+var selectedCities = cities.slice(1,4);
+document.getElementById("cities-list").innerHTML = cities;
+document.getElementById("s-cities-list").innerHTML = selectedCities;
+
+// question 16
+var arrText = ["This ", "is ", "my ", "cat"];
+var arrString = arrText.join()
+document.getElementById("arr-text").innerHTML = arrText;
+document.getElementById("arr-string").innerHTML = arrString;
