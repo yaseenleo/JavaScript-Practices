@@ -1,0 +1,1 @@
+thiple equal operator (===) is used to check both sides are equal to each other and there type is same
