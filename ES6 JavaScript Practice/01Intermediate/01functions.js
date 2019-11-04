@@ -27,3 +27,16 @@ let myAdder = function(num1, num2) {
 let result = myAdder(2,2);
 console.log(result);
 console.log(myAdder(2,2));
+
+let myMultiplier = function(num1, num2) {
+    return num1 * num2
+}
+
+let multiply = myMultiplier(3,2);
+console.log(multiply);
+
+let guestUser = function(name = 'unName', courseCount = 0){  //these are known as default parameter when you don't pass anything these take over
+    return 'Hello ' + name + 'and your course count is: ' + courseCount
+}
+
+console.log(guestUser());
