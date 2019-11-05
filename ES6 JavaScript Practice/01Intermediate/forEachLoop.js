@@ -25,3 +25,13 @@ months.forEach( (month, index)=>{
 
     }
 })
+
+const myTodo = []
+
+myTodo.push("Play Games");
+myTodo.push("Record videos for youtube");
+myTodo.push("Eat food properly");
+
+myTodo.forEach((todo, index) => {
+    console.log(`Your task no. ${index + 1} is ${todo}`)    
+});
