@@ -65,3 +65,14 @@ const listNotDone = lists.filter((list) => {
         console.log(`${list.title} is not done`)
     }
 } )
+
+//this will show an error because of arrow function to remove the error we have to bind this by making use cases
+// const cameras = {
+//     price: 600,
+//     weight: 2000,
+//     myDes: () =>{
+//         return `This canon camera is of ${this.price}$`
+//     }
+// }
+
+// console.log(cameras.myDes());
