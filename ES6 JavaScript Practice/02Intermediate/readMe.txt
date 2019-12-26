@@ -24,3 +24,7 @@ null
 undefined
 
 anything else rather then these are true
+
+by using try and catch we can avoid program where it freezes by error
+
+to handle web base request and api request promises is the best approach to use
