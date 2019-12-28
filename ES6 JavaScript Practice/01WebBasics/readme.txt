@@ -1,3 +1,5 @@
+preventDefault() stops the default action that browser does
+
 Document.anchors ||Read only
 Returns a list of all of the anchors in the document.
 
