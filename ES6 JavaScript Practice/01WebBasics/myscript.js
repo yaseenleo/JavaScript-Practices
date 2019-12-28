@@ -31,3 +31,8 @@ const pElements = document.querySelectorAll('p');
 // })
 
 pElements.forEach((p) => p.textContent = 'i am being changed by JS loop, arrow function')
+
+const myNewPara = document.createElement('p');
+myNewPara.textContent = 'I was added via JS';
+
+document.querySelector('body').appendChild(myNewPara);
