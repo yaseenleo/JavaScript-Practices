@@ -1,3 +1,14 @@
+local storage
+
+CRUD = create, read, update, delete
+
+localStorage.setItem('key', 'value')   // setItem is used to insert values in local storage
+localStorage.getItem('key')   // getItem is used to retrieve data from local storage
+localStorage.removeItem('key')   // removeItem is used to delete the values which recites in the key;
+localStorage.clear()  // clear is used to clear the entire keys and values inside local storage
+
+===========================================================================================================
+
 preventDefault() stops the default action that browser does
 
 Document.anchors ||Read only
