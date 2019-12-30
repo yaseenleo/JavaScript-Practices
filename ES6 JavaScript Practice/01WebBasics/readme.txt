@@ -7,6 +7,8 @@ localStorage.getItem('key')   // getItem is used to retrieve data from local sto
 localStorage.removeItem('key')   // removeItem is used to delete the values which recites in the key;
 localStorage.clear()  // clear is used to clear the entire keys and values inside local storage
 
+JSON.stringify(variableName) //is used to convert an object into string so that object can be stored in local storage
+JSON.parse(variableName)  //is used to convert a string into an object 
 ===========================================================================================================
 
 preventDefault() stops the default action that browser does
