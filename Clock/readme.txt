@@ -1,0 +1,1 @@
+this includes a digital clock which changes color every second as per time using JavaScript
