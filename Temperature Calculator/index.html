@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="https://bootswatch.com/3/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="main-wrapper">
+        <div class="card">
+
+            <div class="input-group">
+                <label for="celcius">Celsius</label>
+                <input type="number" class="form-control" id="celcius" oninput="celToFah()">
+            </div>
+            <div class="input-group">
+                <label for="fahrenheit">Fahrenheit</label>
+                <input type="number" class="form-control" id="fahrenheit" oninput="fahToCel()">
+            </div>
+
+            <div class="input-group">
+                <label for="kelvin">Kelvin</label>
+                <input type="number" class="form-control" id="kelvin" oninput="kelToAll()">
+            </div>
+
+        </div>
+    </section>
+</body>
+<script src="app.js"></script>
+
+</html>
