@@ -10,6 +10,19 @@ let todos = [
     'fill up the fuel'
 ]
 
-console.log(`You have ${todos.length} Todos!`);
-console.log(`Todo: ${todos[0]}`);
-console.log(`Todo: ${todos[todos.length - 2]}`);
+// console.log(`You have ${todos.length} Todos!`);
+// console.log(`Todo: ${todos[0]}`);
+// console.log(`Todo: ${todos[todos.length - 2]}`);
+
+// Delete the third item
+// Add a new item on the end
+// Remove the first item from the list
+
+todos.splice(2, 1);
+console.log(todos);
+
+todos.push("Carefully drive the care with indications");
+console.log(todos);
+
+todos.shift();
+console.log(todos);
