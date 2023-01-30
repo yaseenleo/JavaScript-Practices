@@ -26,3 +26,26 @@ console.log(todos);
 
 todos.shift();
 console.log(todos);
+
+todos.map((items, index) =>{
+    console.log(`${items}`)
+})
+
+// for each loop of array
+todos.forEach((items, index) => {
+    console.log(items);
+})
+
+// for loop in reverse
+for (let count = todos.length - 1; count >= 0; count-- ) {
+    const num = count + 1;
+    const list = todos[count]
+    console.log(num + "." + list)
+}
+
+// for loop in reverse
+for (let count = 0; count < todos.length; count++ ) {
+    const num = count + 1;
+    const list = todos[count]
+    console.log(num + "." + list)
+}
