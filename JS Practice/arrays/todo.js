@@ -3,12 +3,12 @@
 // print the first and second to last items -> Todo: walk the dog
 
 let todos = [
-    'Wake up early morning',
-    'eat your breakfas by 8am',
-    'get ready for office',
-    'check your vehicle everything is okay',
-    'fill up the fuel'
-]
+  "Wake up early morning",
+  "eat your breakfas by 8am",
+  "get ready for office",
+  "check your vehicle everything is okay",
+  "fill up the fuel",
+];
 
 // console.log(`You have ${todos.length} Todos!`);
 // console.log(`Todo: ${todos[0]}`);
@@ -27,25 +27,60 @@ console.log(todos);
 todos.shift();
 console.log(todos);
 
-todos.map((items, index) =>{
-    console.log(`${items}`)
-})
+todos.map((items, index) => {
+  console.log(`${items}`);
+});
 
 // for each loop of array
 todos.forEach((items, index) => {
-    console.log(items);
-})
+  console.log(items);
+});
 
 // for loop in reverse
-for (let count = todos.length - 1; count >= 0; count-- ) {
-    const num = count + 1;
-    const list = todos[count]
-    console.log(num + "." + list)
+for (let count = todos.length - 1; count >= 0; count--) {
+  const num = count + 1;
+  const list = todos[count];
+  console.log(num + "." + list);
 }
 
 // for loop in reverse
-for (let count = 0; count < todos.length; count++ ) {
-    const num = count + 1;
-    const list = todos[count]
-    console.log(num + "." + list)
+for (let count = 0; count < todos.length; count++) {
+  const num = count + 1;
+  const list = todos[count];
+  console.log(num + "." + list);
 }
+
+// 1. Conver array to array of object -> text, complete
+// 2. Create function to remove a todo by text value
+
+const todosComplete = [
+  {
+    text: "Order Food",
+    complete: true,
+  },
+  {
+    text: "Do some chores",
+    complete: false,
+  },
+  {
+    text: "Exercise",
+    complete: true,
+  },
+  {
+    text: "Do work",
+    complete: false,
+  },
+];
+
+const deleteTodo = function (todos, todoText) {
+  const index = todos.findIndex(function (todo) {
+    return todo.text.toLowerCase() === todoText.toLowerCase();
+  });
+
+  if (index > -1) {
+    todos.splice(index, 1);
+  }
+};
+
+deleteTodo(todosComplete, "do work");
+console.log(todosComplete);
