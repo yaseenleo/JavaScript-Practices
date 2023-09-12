@@ -63,3 +63,16 @@ const findWish = function (wishNote, wishTitle) {
 
 const wish = findWish(wishNote, "work modification");
 console.log(wish);
+
+const filterNotes = function (filterNote, query) {
+  const filter = filterNote.filter(function (note, index) {
+    const isTitle = note.title.toLowerCase().includes(query.toLowerCase());
+    const isBody = note.body.toLowerCase().includes(query.toLowerCase());
+
+    return isTitle || isBody;
+  });
+
+  return filter;
+};
+
+console.log(filterNotes(wishNote, "habbits"), "filter");

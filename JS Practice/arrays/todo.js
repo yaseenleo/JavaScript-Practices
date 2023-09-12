@@ -82,5 +82,27 @@ const deleteTodo = function (todos, todoText) {
   }
 };
 
-deleteTodo(todosComplete, "do work");
-console.log(todosComplete);
+const showDeletedTodo = function (todo, todoText) {
+  const find = todo.find((todo) => {
+    return todo.text.toLowerCase() === todoText.toLowerCase();
+  });
+
+  console.log(find, "deleted find");
+  return find;
+};
+
+const getThingsTodo = function (todo) {
+  const filterTodo = todo.filter(function (checkList) {
+    // return checkList.complete !== true;
+    // or
+    return !checkList.complete;
+  });
+
+  return filterTodo;
+};
+
+console.log(getThingsTodo(todosComplete), "filter completed");
+
+// showDeletedTodo(todosComplete, "do work");
+// deleteTodo(todosComplete, "do work");
+// console.log(todosComplete);
