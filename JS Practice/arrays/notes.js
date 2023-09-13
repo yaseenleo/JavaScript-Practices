@@ -62,7 +62,7 @@ const findWish = function (wishNote, wishTitle) {
 };
 
 const wish = findWish(wishNote, "work modification");
-console.log(wish);
+// console.log(wish);
 
 const filterNotes = function (filterNote, query) {
   const filter = filterNote.filter(function (note, index) {
@@ -75,4 +75,19 @@ const filterNotes = function (filterNote, query) {
   return filter;
 };
 
-console.log(filterNotes(wishNote, "habbits"), "filter");
+// console.log(filterNotes(wishNote, "habbits"), "filter");
+
+const sortNotes = function (notes) {
+  notes.sort(function (a, b) {
+    if (a.title.toLowerCase() < b.title.toLowerCase()) {
+      return -1; // if a is less then b return in assending order
+    } else if (b.title.toLowerCase() < a.title.toLowerCase()) {
+      return 1; // if b is less then a return in desending order
+    } else {
+      return 0;
+    }
+  });
+};
+
+sortNotes(wishNote);
+console.log(wishNote);

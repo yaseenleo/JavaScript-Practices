@@ -101,8 +101,23 @@ const getThingsTodo = function (todo) {
   return filterTodo;
 };
 
-console.log(getThingsTodo(todosComplete), "filter completed");
+// console.log(getThingsTodo(todosComplete), "filter completed");
 
 // showDeletedTodo(todosComplete, "do work");
 // deleteTodo(todosComplete, "do work");
 // console.log(todosComplete);
+
+const sortTodo = function (list) {
+  list.sort(function (a, b) {
+    if (!a.complete && b.complete) {
+      return -1;
+    } else if (a.complete && !b.complete) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+};
+
+sortTodo(todosComplete);
+console.log(todosComplete);
