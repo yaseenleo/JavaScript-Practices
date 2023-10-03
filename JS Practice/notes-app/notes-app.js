@@ -1,3 +1,18 @@
+const wishNote = [
+  {
+    title: "My next trip",
+    body: " I would like to go dubai",
+  },
+  {
+    title: "Habbits to work on",
+    body: "Exercise, Learn new skills and Eat better",
+  },
+  {
+    title: "Work modification",
+    body: "Need to get a remote job",
+  },
+];
+
 // DOM Document Object Model
 
 //query and remove
@@ -13,3 +28,7 @@ ps.forEach(function (p) {
   //   console.log(p.textContent);
   //   p.remove();
 });
+
+const createParagraph = document.createElement("p");
+createParagraph.textContent = "This is a new element from javascript";
+document.querySelector("body").appendChild(createParagraph);
