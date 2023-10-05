@@ -42,3 +42,10 @@ const todoLeft = todosComplete.forEach(function (task) {
     document.querySelector("body").appendChild(taskText);
   }
 });
+
+//Listen for new todo creation
+const addTodoBtn = document
+  .querySelector("#addBtn")
+  .addEventListener("click", function (e) {
+    console.log("Add todo button is clicked");
+  });

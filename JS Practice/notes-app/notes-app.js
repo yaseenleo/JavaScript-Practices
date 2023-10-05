@@ -32,3 +32,10 @@ ps.forEach(function (p) {
 const createParagraph = document.createElement("p");
 createParagraph.textContent = "This is a new element from javascript";
 document.querySelector("body").appendChild(createParagraph);
+
+const textBtn = document
+  .querySelector("button")
+  .addEventListener("click", function (e) {
+    console.log("Button has been clicked");
+    e.target.textContent = "Success";
+  });
