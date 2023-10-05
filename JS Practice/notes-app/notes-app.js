@@ -46,3 +46,7 @@ document.getElementById("delete_note").addEventListener("click", function () {
     note.remove();
   });
 });
+
+document.getElementById("search_text").addEventListener("input", function (e) {
+  console.log(e.target.value);
+});

@@ -49,3 +49,10 @@ const addTodoBtn = document
   .addEventListener("click", function (e) {
     console.log("Add todo button is clicked");
   });
+
+// Listen for todo text change
+document
+  .querySelector("#new_todo_text")
+  .addEventListener("input", function (e) {
+    console.log(e.target.value);
+  });
