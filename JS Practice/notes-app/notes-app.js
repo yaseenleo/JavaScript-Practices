@@ -34,8 +34,15 @@ createParagraph.textContent = "This is a new element from javascript";
 document.querySelector("body").appendChild(createParagraph);
 
 const textBtn = document
-  .querySelector("button")
+  .querySelector("#create_note")
   .addEventListener("click", function (e) {
     console.log("Button has been clicked");
     e.target.textContent = "Success";
   });
+
+document.getElementById("delete_note").addEventListener("click", function () {
+  console.log("delete click");
+  document.querySelectorAll(".notes").forEach(function (note) {
+    note.remove();
+  });
+});
