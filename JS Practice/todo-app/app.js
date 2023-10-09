@@ -27,21 +27,37 @@ const todosComplete = [
 // You have 2 todo left (p element)
 // Add a p for each todo above (use text value)
 
-const incompleteTodos = todosComplete.filter(function (todo) {
-  return !todo.complete;
-});
+const text = {
+  searchText: "",
+};
 
-const summary = document.createElement("h2");
-summary.textContent = `You have ${incompleteTodos.length} todo's left`;
-document.querySelector("body").appendChild(summary);
+const renderTodos = function (list, filterText) {
+  const filterTodos = list.filter(function (todoList) {
+    return todoList.text
+      .toLowerCase()
+      .includes(filterText.searchText.toLowerCase());
+  });
 
-const todoLeft = todosComplete.forEach(function (task) {
-  if (task.complete == false) {
+  document.querySelector("#todos").innerHTML = "";
+
+  console.log(filterTodos);
+
+  const incompleteTodos = filterTodos.filter(function (todo) {
+    return !todo.complete;
+  });
+
+  const summary = document.createElement("h2");
+  summary.textContent = `You have ${incompleteTodos.length} todo's left`;
+  document.querySelector("#todos").appendChild(summary);
+
+  filterTodos.forEach(function (task) {
     const taskText = document.createElement("p");
     taskText.textContent = task.text;
-    document.querySelector("body").appendChild(taskText);
-  }
-});
+    document.querySelector("#todos").appendChild(taskText);
+  });
+};
+
+renderTodos(todosComplete, text);
 
 //Listen for new todo creation
 const addTodoBtn = document
@@ -50,9 +66,15 @@ const addTodoBtn = document
     console.log("Add todo button is clicked");
   });
 
+// 1. Setup a div contain for todos
+// 2. Setup a filter (searchtext) and wire up a new filter input to change it
+// 3. Create a renderTodos function to render and rerender the latest filtered data
+
 // Listen for todo text change
 document
   .querySelector("#new_todo_text")
   .addEventListener("input", function (e) {
     console.log(e.target.value);
+    text.searchText = e.target.value;
+    renderTodos(todosComplete, text);
   });
