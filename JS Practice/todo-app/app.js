@@ -29,13 +29,18 @@ const todosComplete = [
 
 const text = {
   searchText: "",
+  hideCompleted: false,
 };
 
 const renderTodos = function (list, filterText) {
   const filterTodos = list.filter(function (todoList) {
-    return todoList.text
+    const searchTextMatch = todoList.text
       .toLowerCase()
       .includes(filterText.searchText.toLowerCase());
+
+    const hideCompletedMatch = !text.hideCompleted || !todoList.complete;
+
+    return searchTextMatch && hideCompletedMatch;
   });
 
   document.querySelector("#todos").innerHTML = "";
@@ -83,8 +88,16 @@ document.querySelector("#todo_form").addEventListener("submit", function (e) {
   e.preventDefault();
 
   let todoValue = e.target.elements.todotext.value;
-  todosComplete.push({ text: todoValue, complete: false });
+  let todoStatus = e.target.elements.hide_completed.checked;
+  todosComplete.push({ text: todoValue, complete: todoStatus });
   renderTodos(todosComplete, text);
   e.target.elements.todotext.value = "";
-  console.log(todosComplete);
+  console.log(todosComplete, todoStatus);
 });
+
+document
+  .querySelector("#hide_complete")
+  .addEventListener("change", function (e) {
+    text.hideCompleted = e.target.checked;
+    renderTodos(todosComplete, text);
+  });
