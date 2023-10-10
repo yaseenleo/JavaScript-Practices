@@ -60,11 +60,11 @@ const renderTodos = function (list, filterText) {
 renderTodos(todosComplete, text);
 
 //Listen for new todo creation
-const addTodoBtn = document
-  .querySelector("#addBtn")
-  .addEventListener("click", function (e) {
-    console.log("Add todo button is clicked");
-  });
+// const addTodoBtn = document
+//   .querySelector("#addBtn")
+//   .addEventListener("click", function (e) {
+//     console.log("Add todo button is clicked");
+//   });
 
 // 1. Setup a div contain for todos
 // 2. Setup a filter (searchtext) and wire up a new filter input to change it
@@ -78,3 +78,13 @@ document
     text.searchText = e.target.value;
     renderTodos(todosComplete, text);
   });
+
+document.querySelector("#todo_form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let todoValue = e.target.elements.todotext.value;
+  todosComplete.push({ text: todoValue, complete: false });
+  renderTodos(todosComplete, text);
+  e.target.elements.todotext.value = "";
+  console.log(todosComplete);
+});

@@ -72,3 +72,8 @@ document.getElementById("search_text").addEventListener("input", function (e) {
   filter.searchText = e.target.value;
   renderNotes(wishNote, filter);
 });
+
+document.querySelector("#name_form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log(e.target.elements.firstname.value);
+});
