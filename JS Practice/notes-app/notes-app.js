@@ -81,3 +81,7 @@ document.querySelector("#name_form").addEventListener("submit", function (e) {
 document.querySelector("#for_fun").addEventListener("change", function (e) {
   console.log(e.target.checked);
 });
+
+document.querySelector("#filter_by").addEventListener("change", function (e) {
+  console.log(e.target.value);
+});
