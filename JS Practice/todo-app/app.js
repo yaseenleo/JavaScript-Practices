@@ -1,21 +1,26 @@
-const todosComplete = [
-  {
-    text: "Order Food",
-    complete: true,
-  },
-  {
-    text: "Do some chores",
-    complete: false,
-  },
-  {
-    text: "Exercise",
-    complete: true,
-  },
-  {
-    text: "Do work",
-    complete: false,
-  },
+let todosComplete = [
+  // {
+  //   text: "Order Food",
+  //   complete: true,
+  // },
+  // {
+  //   text: "Do some chores",
+  //   complete: false,
+  // },
+  // {
+  //   text: "Exercise",
+  //   complete: true,
+  // },
+  // {
+  //   text: "Do work",
+  //   complete: false,
+  // },
 ];
+
+const todoJSON = localStorage.getItem("todoform");
+if (todoJSON !== null) {
+  todosComplete = JSON.parse(todoJSON);
+}
 
 // const paragraph = document.querySelectorAll("p");
 // paragraph.forEach(function (para) {
@@ -88,11 +93,10 @@ document.querySelector("#todo_form").addEventListener("submit", function (e) {
   e.preventDefault();
 
   let todoValue = e.target.elements.todotext.value;
-  let todoStatus = e.target.elements.hide_completed.checked;
-  todosComplete.push({ text: todoValue, complete: todoStatus });
+  todosComplete.push({ text: todoValue, complete: false });
+  localStorage.setItem("todoform", JSON.stringify(todosComplete));
   renderTodos(todosComplete, text);
   e.target.elements.todotext.value = "";
-  console.log(todosComplete, todoStatus);
 });
 
 document

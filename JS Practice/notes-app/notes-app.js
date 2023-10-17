@@ -1,18 +1,25 @@
-const wishNote = [
-  {
-    title: "My next trip",
-    body: " I would like to go dubai",
-  },
-  {
-    title: "Habbits to work on",
-    body: "Exercise, Learn new skills and Eat better",
-  },
-  {
-    title: "Work modification",
-    body: "Need to get a remote job",
-  },
+let wishNote = [
+  // {
+  //   title: "My next trip",
+  //   body: " I would like to go dubai",
+  // },
+  // {
+  //   title: "Habbits to work on",
+  //   body: "Exercise, Learn new skills and Eat better",
+  // },
+  // {
+  //   title: "Work modification",
+  //   body: "Need to get a remote job",
+  // },
 ];
 
+wishNotesJSON = localStorage.getItem("wishNote");
+
+if (wishNotesJSON !== null) {
+  wishNote = JSON.parse(wishNotesJSON);
+}
+
+console.log(wishNote);
 // DOM Document Object Model
 
 //query and remove
@@ -60,7 +67,13 @@ const renderNotes = function (notes, filters) {
 
   filterNotes.forEach(function (note) {
     const nodeEl = document.createElement("p");
-    nodeEl.textContent = note.title;
+
+    if (note.title.length > 0) {
+      nodeEl.textContent = note.title;
+    } else {
+      nodeEl.textContent = "unnamed note";
+    }
+
     document.querySelector("#notes").appendChild(nodeEl);
   });
 };
@@ -76,6 +89,13 @@ document.getElementById("search_text").addEventListener("input", function (e) {
 document.querySelector("#name_form").addEventListener("submit", function (e) {
   e.preventDefault();
   console.log(e.target.elements.firstname.value);
+  let value = e.target.elements.firstname.value;
+  wishNote.push({
+    title: value,
+    body: "Some task",
+  });
+  localStorage.setItem("wishNote", JSON.stringify(wishNote));
+  renderNotes(wishNote, filter);
 });
 
 document.querySelector("#for_fun").addEventListener("change", function (e) {
