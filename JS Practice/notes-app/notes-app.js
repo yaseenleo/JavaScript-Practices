@@ -1,17 +1,4 @@
-let wishNote = [
-  // {
-  //   title: "My next trip",
-  //   body: " I would like to go dubai",
-  // },
-  // {
-  //   title: "Habbits to work on",
-  //   body: "Exercise, Learn new skills and Eat better",
-  // },
-  // {
-  //   title: "Work modification",
-  //   body: "Need to get a remote job",
-  // },
-];
+let wishNote = getSavedNotes();
 
 wishNotesJSON = localStorage.getItem("wishNote");
 
@@ -58,26 +45,6 @@ const filter = {
   searchText: "",
 };
 
-const renderNotes = function (notes, filters) {
-  const filterNotes = notes.filter(function (note) {
-    return note.title.toLowerCase().includes(filters.searchText.toLowerCase());
-  });
-
-  document.getElementById("notes").innerHTML = " ";
-
-  filterNotes.forEach(function (note) {
-    const nodeEl = document.createElement("p");
-
-    if (note.title.length > 0) {
-      nodeEl.textContent = note.title;
-    } else {
-      nodeEl.textContent = "unnamed note";
-    }
-
-    document.querySelector("#notes").appendChild(nodeEl);
-  });
-};
-
 renderNotes(wishNote, filter);
 
 document.getElementById("search_text").addEventListener("input", function (e) {
@@ -94,7 +61,8 @@ document.querySelector("#name_form").addEventListener("submit", function (e) {
     title: value,
     body: "Some task",
   });
-  localStorage.setItem("wishNote", JSON.stringify(wishNote));
+  e.target.elements.firstname.value = "";
+  saveNotes(wishNote);
   renderNotes(wishNote, filter);
 });
 
