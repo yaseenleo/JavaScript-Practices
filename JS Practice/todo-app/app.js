@@ -1,26 +1,4 @@
-let todosComplete = [
-  // {
-  //   text: "Order Food",
-  //   complete: true,
-  // },
-  // {
-  //   text: "Do some chores",
-  //   complete: false,
-  // },
-  // {
-  //   text: "Exercise",
-  //   complete: true,
-  // },
-  // {
-  //   text: "Do work",
-  //   complete: false,
-  // },
-];
-
-const todoJSON = localStorage.getItem("todoform");
-if (todoJSON !== null) {
-  todosComplete = JSON.parse(todoJSON);
-}
+let todosComplete = getSavedTodos();
 
 // const paragraph = document.querySelectorAll("p");
 // paragraph.forEach(function (para) {
@@ -35,36 +13,6 @@ if (todoJSON !== null) {
 const text = {
   searchText: "",
   hideCompleted: false,
-};
-
-const renderTodos = function (list, filterText) {
-  const filterTodos = list.filter(function (todoList) {
-    const searchTextMatch = todoList.text
-      .toLowerCase()
-      .includes(filterText.searchText.toLowerCase());
-
-    const hideCompletedMatch = !text.hideCompleted || !todoList.complete;
-
-    return searchTextMatch && hideCompletedMatch;
-  });
-
-  document.querySelector("#todos").innerHTML = "";
-
-  console.log(filterTodos);
-
-  const incompleteTodos = filterTodos.filter(function (todo) {
-    return !todo.complete;
-  });
-
-  const summary = document.createElement("h2");
-  summary.textContent = `You have ${incompleteTodos.length} todo's left`;
-  document.querySelector("#todos").appendChild(summary);
-
-  filterTodos.forEach(function (task) {
-    const taskText = document.createElement("p");
-    taskText.textContent = task.text;
-    document.querySelector("#todos").appendChild(taskText);
-  });
 };
 
 renderTodos(todosComplete, text);
@@ -94,7 +42,7 @@ document.querySelector("#todo_form").addEventListener("submit", function (e) {
 
   let todoValue = e.target.elements.todotext.value;
   todosComplete.push({ text: todoValue, complete: false });
-  localStorage.setItem("todoform", JSON.stringify(todosComplete));
+  saveTodo(todosComplete);
   renderTodos(todosComplete, text);
   e.target.elements.todotext.value = "";
 });
