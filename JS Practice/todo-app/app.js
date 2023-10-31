@@ -41,7 +41,7 @@ document.querySelector("#todo_form").addEventListener("submit", function (e) {
   e.preventDefault();
 
   let todoValue = e.target.elements.todotext.value;
-  todosComplete.push({ text: todoValue, complete: false });
+  todosComplete.push({ id: uuidv4(), text: todoValue, complete: false });
   saveTodo(todosComplete);
   renderTodos(todosComplete, text);
   e.target.elements.todotext.value = "";

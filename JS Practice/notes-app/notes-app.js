@@ -58,6 +58,7 @@ document.querySelector("#name_form").addEventListener("submit", function (e) {
   console.log(e.target.elements.firstname.value);
   let value = e.target.elements.firstname.value;
   wishNote.push({
+    id: uuidv4(),
     title: value,
     body: "Some task",
   });

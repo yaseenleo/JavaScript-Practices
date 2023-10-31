@@ -1,3 +1,5 @@
+console.log(uuidv4());
+
 //Read existing notes from the localStorage
 
 const getSavedNotes = () => {
@@ -18,13 +20,22 @@ const saveNotes = function (note) {
 //Generate the DOM structure for a note
 
 const generateNoteDOM = (note) => {
-  const nodeEl = document.createElement("p");
+  const nodeEl = document.createElement("div");
+  const textEl = document.createElement("span");
+  const button = document.createElement("button");
 
+  // Setup the remove note button
+  button.textContent = "x";
+  nodeEl.appendChild(button);
+
+  // Setup the note title text
   if (note.title.length > 0) {
-    nodeEl.textContent = note.title;
+    textEl.textContent = note.title;
   } else {
     nodeEl.textContent = "unnamed note";
   }
+
+  nodeEl.appendChild(textEl);
 
   return nodeEl;
 };

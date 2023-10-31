@@ -12,9 +12,23 @@ const saveTodo = (todo) => {
 };
 
 const generateTodoDOM = (todo) => {
-  const todoText = document.createElement("p");
-  todoText.textContent = todo.text;
-  return todoText;
+  let nodeEl = document.createElement("div");
+  const todoText = document.createElement("span");
+  let checkboxEl = document.createElement("input");
+  nodeEl.setAttribute("id", uuidv4());
+  checkboxEl.setAttribute("type", "checkbox");
+
+  const button = document.createElement("button");
+  button.textContent = "x";
+
+  nodeEl.appendChild(checkboxEl);
+
+  if (todo.text.length > 0) {
+    todoText.textContent = todo.text;
+  }
+  nodeEl.appendChild(todoText);
+  nodeEl.appendChild(button);
+  return nodeEl;
 };
 
 const generateSummaryDOM = (list) => {
