@@ -11,6 +11,17 @@ const saveTodo = (todo) => {
   localStorage.setItem("todoform", JSON.stringify(todo));
 };
 
+// remove todo item
+const removeTodo = function (id) {
+  const todoIndex = todosComplete.findIndex(function (todo) {
+    return todo.id === id;
+  });
+
+  if (todoIndex > -1) {
+    todosComplete.splice(todoIndex, 1);
+  }
+};
+
 const generateTodoDOM = (todo) => {
   let nodeEl = document.createElement("div");
   const todoText = document.createElement("span");
@@ -20,6 +31,11 @@ const generateTodoDOM = (todo) => {
 
   const button = document.createElement("button");
   button.textContent = "x";
+  button.addEventListener("click", function () {
+    removeTodo(todo.id);
+    saveTodo(todosComplete);
+    renderTodos(todosComplete, text);
+  });
 
   nodeEl.appendChild(checkboxEl);
 
